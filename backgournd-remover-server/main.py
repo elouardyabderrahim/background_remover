@@ -41,7 +41,7 @@ async def remobe_bg():
 
     with open(path, 'rb') as i:
         output_path = f"{uuid.uuid4()}.jpg"
-        with open(output_path, 'wb') as o:
+        with open(f"{IMAGEDIR}{output_path}", 'wb') as o:
             input = i.read()
             output = remove(input)
             o.write(output)
